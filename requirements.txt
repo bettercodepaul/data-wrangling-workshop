@@ -4,3 +4,4 @@ matplotlib==3.7.1
 dash-bootstrap-components==1.4.1
 jupyter-dash==0.4.2
 notebook==6.4.8
+
