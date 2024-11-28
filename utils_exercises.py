@@ -140,17 +140,56 @@ q2 = HintSolution(
 )
 
 q3 = HintSolution(
-    'Der Parameter top_k wird aktuell im Beispiel nicht ausgelesen und nicht berücksichtigt. Korrigiere das.',
+    'Füge eine neue Filter-Option hinzu, mit der auf Nr. 1 Hits eingeschränkt werden kann.',
     None,
-    'Füge einen Input zu dem Callback `update_streams_per_month` hinzu, der auf die Komponente `top-k-input` reagiert.',
+    'Nutze `dmc.Switch` oder `dmc.Checkbox` und filtere den Dataframe mit `df.filter(pl.col("rank").eq(1))`.',
 """
+all_artists = df.select(pl.col("artist").str.split(", ")).get_column("artist").explode().unique().sort().to_list()
+all_titles = df.select(pl.col("title").unique()).get_column("title").sort().to_list()
+
+app = Dash(external_stylesheets=dmc.styles.ALL)
+
+def get_streams_chart(artist, title, rank_1_only):
+    filter_expr = pl.lit(True) if artist is None else pl.col("artist").str.contains(artist)
+    if title is not None:
+        filter_expr = filter_expr & pl.col("title").eq(title)
+    if rank_1_only:
+        # alle Lieder berücksichtigen, die mindestens einmal auf Platz 1 waren
+        filter_expr = filter_expr & pl.col("rank").min().over("artist", "title").eq(1)
+    data = df.filter(filter_expr).group_by("date").agg(pl.col("streams").sum()).sort("date")
+    return px.line(data, x="date", y="streams", height=300, title=f"Daily Streams for {artist or 'all artists'} - {title or 'all titles'}")
+
+app.layout = dmc.MantineProvider([
+    dmc.Title("Spotify Explorer", order=3, mb=20),
+    dmc.Group([
+        dmc.Select(id="artist-select", label="Artist", placeholder="Select one", data=all_artists, searchable=True),
+        dmc.Select(id="title-select", label="Title", placeholder="Select one", data=all_titles, searchable=True),
+        # Schalter für die Option, nur Lieder anzuzeigen, die mindestens einmal auf Platz 1 waren
+        dmc.Switch(id="rank-1-switch", label="#1 hits only", checked=False)
+    ], grow=True, mb=10),
+    dcc.Graph(id="streams-chart", figure=get_streams_chart(None, None, False))
+])
+
 @app.callback(
     Output(component_id="streams-chart", component_property="figure"),
+    Output(component_id="artist-select", component_property="data"),
+    Output(component_id="title-select", component_property="data"),
     Input(component_id="artist-select", component_property="value"),
-    Input(component_id="region-select", component_property="value"),
-    Input(component_id="top-k-input", component_property="value")
+    Input(component_id="title-select", component_property="value"),
+    Input(component_id="rank-1-switch", component_property="checked")
 )
-def update_streams_per_month(selected_artist, regions, top_k):
-    return get_streams_per_month_figure(selected_artist, regions, top_k)
+def update_streams_per_month(selected_artist, selected_title, rank_1_only):
+    filter_expr = pl.lit(True) if not rank_1_only else pl.col("rank").eq(1)
+    if selected_artist is not None:
+        possible_titles = df.filter(filter_expr & pl.col("artist").str.contains(selected_artist)).select(pl.col("title").unique()).get_column("title").sort().to_list()
+    else:
+        possible_titles = df.filter(filter_expr).select(pl.col("title").unique()).get_column("title").sort().to_list()
+    if selected_title is not None:
+        possible_artists = df.filter(filter_expr & pl.col("title").eq(selected_title)).select(pl.col("artist").str.split(", ")).get_column("artist").explode().unique().sort().to_list()
+    else:
+        possible_artists = df.filter(filter_expr).select(pl.col("artist").str.split(", ")).get_column("artist").explode().unique().sort().to_list()
+    return get_streams_chart(selected_artist, selected_title, rank_1_only), possible_artists, possible_titles
+
+app.run(jupyter_mode="inline", jupyter_height=500)
 """
 )

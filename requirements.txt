@@ -1,7 +1,10 @@
-pandas==1.5.3
-numpy==1.22.4
-matplotlib==3.7.1
-dash-bootstrap-components==1.4.1
-jupyter-dash==0.4.2
-notebook==6.4.8
+polars == 1.15.0
+pyarrow == 18.1.0
+pandas == 2.2.3
+plotly == 5.24.1
+dash == 2.18.2
+dash-ag-grid == 31.3.0
+dash-mantine-components = 0.15.0
+notebook
+nbformat
 
