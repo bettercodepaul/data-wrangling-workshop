@@ -4,7 +4,7 @@ pandas == 2.2.3
 plotly == 5.24.1
 dash == 2.18.2
 dash-ag-grid == 31.3.0
-dash-mantine-components = 0.15.0
+dash-mantine-components == 0.15.0
 notebook
 nbformat
 
