@@ -41,7 +41,7 @@ The easiest way is to open the notebooks in Google Colab:
 
 A local environment is also possible. You may have to make a few adjustments to the notebooks and install Graphviz to display the execution plans.
 
-We recommend [uv](https://docs.astral.sh/uv/) and (Visual Studio Code)[https://code.visualstudio.com] with its (Python Extension)[https://marketplace.visualstudio.com/items?itemName=ms-python.python].
+We recommend [uv](https://docs.astral.sh/uv/) and [Visual Studio Code](https://code.visualstudio.com) with its [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
 ## Additional material
 
