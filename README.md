@@ -9,7 +9,7 @@ You will learn how to use [Polars](https://pola.rs) to explore tabular data and 
 
 At the end you will be able to build a web application that looks like this with just a few lines of code:
 
-![screenshot](https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/images/screenshot.png | width=800)
+![screenshot](https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/images/screenshot.png)
 
 The ingredients that make the workshop interesting and entertaining:
 
