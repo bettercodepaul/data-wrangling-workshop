@@ -21,6 +21,14 @@ def download_data():
     UTILS_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/utils.py"
     urllib.request.urlretrieve(EXERCISES_URL, os.path.basename(UTILS_URL))
 
+def download_region_data():
+    REGION_DATA_URL = "https://github.com/bettercodepaul/data2day_2023_polars/raw/main/region-info.csv"
+    LOCAL_REGION_DATA_FILE_NAME = os.path.basename(REGION_DATA_URL)
+    urllib.request.urlretrieve(REGION_DATA_URL, LOCAL_REGION_DATA_FILE_NAME)
+    BIG_DATA_URL = "https://github.com/bettercodepaul/data2day_2023_polars/releases/download/data-parquet/spotify-charts-2017-2021.parquet"
+    LOCAL_BIG_DATA_FILE_NAME = os.path.basename(BIG_DATA_URL)
+    urllib.request.urlretrieve(BIG_DATA_URL, LOCAL_BIG_DATA_FILE_NAME)
+
 def play_song(df, index=0):
     from IPython.display import IFrame
     if "trackId" in df.columns:
