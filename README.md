@@ -70,7 +70,7 @@ Du wirst lernen, wie du mit [Polars](https://pola.rs) tabellarische Daten analys
 
 Am Ende wirst du mit wenigen Codezeilen eine Webanwendung erstellen können, die so aussieht:
 
-!(Screenshot)[https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/images/screenshot.pong]
+![Screenshot](https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/images/screenshot.png)
 
 Die Zutaten, die den Workshop interessant und unterhaltsam machen:
 
