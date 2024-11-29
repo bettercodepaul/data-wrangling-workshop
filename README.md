@@ -5,7 +5,7 @@ Material (notebooks and data) for the hands-on workshop "Data Wrangling with Pol
 
 The data on which the workshop is based are daily charts from Spotify from 2017-2021 for different countries.
 
-You will learn how to use [Polars](https://pola.rs) to explore tabular data and how to visualize insights in a web applicaation using [Plotly Dash](https://dash.plotly.com).
+You will learn how to use [Polars](https://pola.rs), an extremely fast dataframe library, to explore tabular data and how to visualize insights in a web application using [Plotly Dash](https://dash.plotly.com), a highly flexible low-code web framework.
 
 At the end you will be able to build a web application that looks like this with just a few lines of code:
 
@@ -66,7 +66,7 @@ Material (Notebooks und Daten) für den Praxisworkshop "Datenaufbereitung mit Po
 
 Die Daten, auf denen der Workshop basiert, sind tägliche Charts von Spotify von 2017 bis 2021 für verschiedene Länder.
 
-Du wirst lernen, wie du mit [Polars](https://pola.rs) tabellarische Daten analysierst und wie du Erkenntnisse mithilfe von [Plotly Dash](https://dash.plotly.com) in einer Webanwendung visualisierst.
+Du wirst lernen, wie du mit [Polars](https://pola.rs), einer extrem schnellen Dataframe-Bibliothek, tabellarische Daten analysierst und wie du Erkenntnisse mithilfe von [Plotly Dash](https://dash.plotly.com), einem äußerst flexiblen Low-Code-Webframework, in einer Webanwendung visualisierst.
 
 Am Ende wirst du mit wenigen Codezeilen eine Webanwendung erstellen können, die so aussieht:
 
