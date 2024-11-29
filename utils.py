@@ -8,6 +8,10 @@ def download_data():
     DATA_URL = "https://github.com/bettercodepaul/data2day_2023_polars/raw/main/spotify-charts-2017-2021-global-top200.csv.gz"
     LOCAL_DATA_FILE_NAME = os.path.basename(DATA_URL)
     urllib.request.urlretrieve(DATA_URL, LOCAL_DATA_FILE_NAME)
+    # download track genres data
+    GENRES_DATA_URL = "https://github.com/bettercodepaul/data2day_2023_polars/raw/main/track-genres.parquet"
+    LOCAL_GENRES_DATA_FILE_NAME = os.path.basename(GENRES_DATA_URL)
+    urllib.request.urlretrieve(GENRES_DATA_URL, LOCAL_GENRES_DATA_FILE_NAME)
     # download requirements.txt with required libraries
     REQUIREMENTS_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/requirements.txt"
     urllib.request.urlretrieve(REQUIREMENTS_URL, os.path.basename(REQUIREMENTS_URL))
