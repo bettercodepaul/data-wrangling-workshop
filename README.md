@@ -31,11 +31,11 @@ You should have basic knowledge of a structured data processing technology, e.g.
 
 The easiest way is to open the notebooks in Google Colab:
 
-- [Colab Intro](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/colab_intro_en.ipynb) - Polars: Optional, if you don't know Jupyter/Colab
-- [Part 1](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Polars_Part_1.ipynb) - Polars: load, select, filter & sort
-- [Part 2](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Polars_Part_2.ipynb) - Polars: aggregations, joins & reshaping
-- [Part 3](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Polars_Part_3.ipynb) - Polars: custom expressions, lazy mode and streaming
-- [Part 4](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Dash_Part_4.ipynb) - Dash: layout, callbacks, Dash Mantine Components, AgGrid
+- [Colab Intro](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/colab_intro_en.ipynb) - Polars: Optional, if you don't know Jupyter/Colab
+- [Part 1](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Polars_Part_1.ipynb) - Polars: load, select, filter & sort
+- [Part 2](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Polars_Part_2.ipynb) - Polars: aggregations, joins & reshaping
+- [Part 3](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Polars_Part_3.ipynb) - Polars: custom expressions, lazy mode and streaming
+- [Part 4](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Dash_Part_4.ipynb) - Dash: layout, callbacks, Dash Mantine Components, AgGrid
 
 ### Local environment
 
@@ -92,11 +92,11 @@ Du solltest Grundkenntnisse in einer strukturierten Datenverarbeitungstechnologi
 
 Am einfachsten ist es die Notebooks in Google Colab zu öffnen:
 
-- [Colab Intro](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/colab_intro_de.ipynb) – Optional, falls dir Jupyter/Colab nicht bekannt ist
-- [Teil 1](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Polars_Teil_1.ipynb) – Polars: Laden, Selektieren, Filtern & Sortieren
-- [Teil 2](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Polars_Teil_2.ipynb) – Polars: Aggregationen, Joins & Reshaping
-- [Teil 3](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Polars_Teil_3.ipynb) – Polars: Custom Expressions, Lazy Mode und Streaming
-- [Teil 4](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/raw/master/Dash_Teil_4.ipynb) – Dash: Layout, Callbacks, Dash Mantine Components, AgGrid
+- [Colab Intro](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/colab_intro_de.ipynb) – Optional, falls dir Jupyter/Colab nicht bekannt ist
+- [Teil 1](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Polars_Teil_1.ipynb) – Polars: Laden, Selektieren, Filtern & Sortieren
+- [Teil 2](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Polars_Teil_2.ipynb) – Polars: Aggregationen, Joins & Reshaping
+- [Teil 3](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Polars_Teil_3.ipynb) – Polars: Custom Expressions, Lazy Mode und Streaming
+- [Teil 4](https://colab.research.google.com/github/bettercodepaul/data-wrangling-praktikum/blob/master/Dash_Teil_4.ipynb) – Dash: Layout, Callbacks, Dash Mantine Components, AgGrid
 
 
 ### Lokale Umgebung
