@@ -16,10 +16,10 @@ def download_data():
     REQUIREMENTS_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/requirements.txt"
     urllib.request.urlretrieve(REQUIREMENTS_URL, os.path.basename(REQUIREMENTS_URL))
     # exercises
-    EXERCISES_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/exercises_de.py"
-    urllib.request.urlretrieve(EXERCISES_URL, os.path.basename(EXERCISES_URL))
-    UTILS_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/utils.py"
-    urllib.request.urlretrieve(EXERCISES_URL, os.path.basename(UTILS_URL))
+    EXERCISES_DE_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/exercises_de.py"
+    urllib.request.urlretrieve(EXERCISES_DE_URL, os.path.basename(EXERCISES_DE_URL))
+    EXERCISES_EN_URL = "https://github.com/bettercodepaul/data-wrangling-praktikum/raw/master/exercises_en.py"
+    urllib.request.urlretrieve(EXERCISES_EN_URL, os.path.basename(EXERCISES_EN_URL))
 
 def download_region_data():
     REGION_DATA_URL = "https://github.com/bettercodepaul/data2day_2023_polars/raw/main/region-info.csv"
