@@ -82,7 +82,7 @@ def assert_approx(actual, expected, tol=0.001):
 
 def get_value(df, column=0):
     import polars as pl
-    if df is pl.dataframe.frame.DataFrame:
+    if isinstance(df, pl.DataFrame):
         value = df.item(0, column)
     else:
         value = df
